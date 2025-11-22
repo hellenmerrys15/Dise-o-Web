@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contáctanos</title>
+    <meta name="description" content="Horarios de atención y formulario para enviar consultas.">
+    <meta name="author" content="Hellen Merry Solis Cuba">
+    <meta name="keywords" content="contacto, soporte, formulario, atención al cliente">
+
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f47521">
+
+    <meta property="og:title" content="Contáctanos">
+    <meta property="og:description" content="Comunícate con nosotros mediante el formulario de contacto.">
+    <meta property="og:image" content="img/Crunchyroll_Logo.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contáctanos">
+    <meta name="twitter:description" content="Comunícate con nosotros mediante el formulario de contacto.">
+    <meta name="twitter:image" content="img/Crunchyroll_Logo.png">
+
+    <link rel="icon" href="img/Crunchyroll_Logo.ico">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="page-contacto">
+<main class="main">
+    <section class="Contenedor section-1">
+        <header class="header">
+            <div class="img">
+                <img src="img/Crunchyroll_Logo.png" alt="Logo de Crunchyroll">
+            </div>
+            <nav class="menu" aria-label="Principal">
+                <a href="index.html">Inicio</a>
+                <a href="simulcast.html">Temporada Simulcast</a>
+                <a href="estrenos.html">Próximos Estrenos</a>
+                <a href="contactanos.html" aria-current="page">Contáctanos</a>
+                <a href="carritocompras.html">Carrito de Compras</a>
+            </nav>
+        </header>
+    </section>
+
+    <section class="Contenedor section-2">
+        <article class="s2-texto">
+            <h1 class="titulo">Contáctanos</h1>
+            <hr>
+            <p>Revisa nuestros horarios de atención y déjanos un mensaje en el formulario.</p>
+        </article>
+
+        <article class="article">
+            <div class="bloque-contacto">
+                <div class="bloque-izq">
+                    <h2>Horarios</h2>
+                    <table class="tabla-contacto" aria-describedby="desc-tabla-contacto">
+                        <caption id="desc-tabla-contacto">Atención de Lunes a Domingo</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Día</th>
+                                <th scope="col">Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Lunes a Viernes</td><td>09:00 – 18:00</td></tr>
+                            <tr><td>Sábado</td><td>10:00 – 16:00</td></tr>
+                            <tr><td>Domingo</td><td>10:00 – 14:00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bloque-der">
+                    <h2>Escríbenos</h2>
+                    <form class="form-contacto form-contacto--inline" onsubmit="return handleSubmit(event)" novalidate>
+                        <p class="form-req">* Datos requeridos</p>
+
+                        <div class="fila">
+                            <label for="nombre">Nombres:<span aria-hidden="true"> *</span></label>
+                            <div class="control"><input type="text" id="nombre" name="nombre" placeholder="Ej. Hellen Merry" required></div>
+                        </div>
+
+                        <div class="fila">
+                            <label for="apellido">Apellidos:<span aria-hidden="true"> *</span></label>
+                            <div class="control"><input type="text" id="apellido" name="apellido" placeholder="Ej. Solis Cuba" required></div>
+                        </div>
+
+                        <div class="fila">
+                            <label for="correo">Email:<span aria-hidden="true"> *</span></label>
+                            <div class="control">
+                                <input type="email" id="correo" name="correo" placeholder="name@something.com" required>
+                                <span class="hint hint-email">Formato correcto: "name@something.com"</span>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <label for="web">Sitio Web:<span aria-hidden="true"> *</span></label>
+                            <div class="control">
+                                <input type="url" id="web" name="web" placeholder="http://tusitio.com" required pattern="http://.+" title="Debe comenzar con http://">
+                                <span class="hint hint-web">Formato correcto: "http://tusitio.com"</span>
+                            </div>
+                        </div>
+
+                        <div class="fila">
+                            <label for="mensaje">Mensaje:<span aria-hidden="true"> *</span></label>
+                            <div class="control"><textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea></div>
+                        </div>
+
+                        <div class="fila fila-submit">
+                            <span aria-hidden="true"></span>
+                            <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="contenedor section-3">
+        <hr>
+        <div class="s5-contenido">
+            <div class="s5-logo">
+                <img src="img/Crunchyroll_Logo.png" alt="Logo de Crunchyroll">
+            </div>
+            <div class="s5-texto">
+                <h3>SONY PICTURES</h3>
+                <p>Te damos la bienvenida a Crunchyroll, tu destino número uno para ver el mejor anime.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            &copy; <a href="#" class="autor">Hellen Merry Solis Cuba</a>
+            &copy; <a href="#">Crunchyroll, LLC</a>
+            <a href="#" class="terminos">Términos de Uso</a>
+            <a href="#" class="politicas">Herramienta de aceptación de cookies</a>
+        </footer>
+    </section>
+</main>
+
+<script>
+function handleSubmit(e){
+  const f = e.target;
+  if(!f.checkValidity()){
+    f.reportValidity();
+    return false;
+  }
+  e.preventDefault();
+  window.location.reload();
+  return false;
+}
+</script>
+</body>
+</html>

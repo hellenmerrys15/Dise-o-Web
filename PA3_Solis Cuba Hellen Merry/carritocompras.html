@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito de Compras</title>
+
+    <meta name="description" content="Carrito de compras: juguetes, animes online y animes físicos. Añade productos y finaliza tu compra.">
+    <meta name="author" content="Hellen Merry Solis Cuba">
+    <meta name="keywords" content="carrito, anime, juguetes, tienda, compras, blu-ray, digital">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#f47521">
+
+    <meta property="og:title" content="Carrito de Compras">
+    <meta property="og:description" content="Añade productos al carrito, aplica cupones y finaliza tu compra.">
+    <meta property="og:image" content="img/Crunchyroll_Logo.png">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Carrito de Compras">
+    <meta name="twitter:description" content="Compra juguetes, animes online y animes físicos.">
+    <meta name="twitter:image" content="img/Crunchyroll_Logo.png">
+
+    <link rel="icon" href="img/Crunchyroll_Logo.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="page-contacto">
+
+<main class="main">
+
+    <section class="Contenedor section-1">
+        <header class="header">
+            <div class="img">
+                <img src="img/Crunchyroll_Logo.png" alt="Logo de Crunchyroll">
+            </div>
+            <nav class="menu" aria-label="Principal">
+                <a href="index.html">Inicio</a>
+                <a href="simulcast.html">Temporada Simulcast</a>
+                <a href="estrenos.html">Próximos Estrenos</a>
+                <a href="contactanos.html">Contáctanos</a>
+                <a href="carritocompras.html" aria-current="page">Carrito de Compras</a>
+            </nav>
+        </header>
+    </section>
+
+    <section class="container py-5">
+
+        <h2 class="text-center mb-3 fw-bold">Carrito de Compras</h2>
+
+        <p class="text-center text-muted mb-1">
+            Añade productos y usa el cupón <strong>ANIME10</strong>.
+        </p>
+
+        <p class="text-center mb-4">
+            <span id="mensaje-oferta" class="fw-bold text-danger"></span>
+        </p>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="card shadow-sm">
+                    <div class="card-body" id="zona-catalogo">
+
+                        <h3 class="fs-5 mb-3">Productos disponibles</h3>
+
+                        <h6 class="text-secondary mt-2">Juguetes</h6>
+
+                        <div class="border rounded p-2 mb-2 d-flex justify-content-between">
+                            <div><strong>Figura Demon Slayer</strong><br><small class="text-muted">Juguete</small></div>
+                            <div class="text-end">
+                                <div>S/ 120.00</div>
+                                <button class="btn btn-sm btn-primary btn-add"
+                                        data-id="1"
+                                        data-name="Figura Demon Slayer"
+                                        data-category="Juguete"
+                                        data-price="120">Añadir</button>
+                            </div>
+                        </div>
+
+                        <div class="border rounded p-2 mb-3 d-flex justify-content-between">
+                            <div><strong>Set de Peluches Ghibli</strong><br><small class="text-muted">Juguete</small></div>
+                            <div class="text-end">
+                                <div>S/ 95.00</div>
+                                <button class="btn btn-sm btn-primary btn-add"
+                                        data-id="2"
+                                        data-name="Set de Peluches Ghibli"
+                                        data-category="Juguete"
+                                        data-price="95">Añadir</button>
+                            </div>
+                        </div>
+
+                        <h6 class="text-secondary mt-2">Animes Online (Digital)</h6>
+
+                        <div class="border rounded p-2 mb-2 d-flex justify-content-between">
+                            <div><strong>Suscripción Anime Online 1 mes</strong><br><small class="text-muted">Digital</small></div>
+                            <div class="text-end">
+                                <div>S/ 35.00</div>
+                                <button class="btn btn-sm btn-primary btn-add"
+                                        data-id="3"
+                                        data-name="Suscripción Anime Online 1 mes"
+                                        data-category="Digital"
+                                        data-price="35">Añadir</button>
+                            </div>
+                        </div>
+
+                        <div class="border rounded p-2 mb-3 d-flex justify-content-between">
+                            <div><strong>Pase Maratón Fin de Semana</strong><br><small class="text-muted">Digital</small></div>
+                            <div class="text-end">
+                                <div>S/ 5.00</div>
+                                <button class="btn btn-sm btn-primary btn-add"
+                                        data-id="4"
+                                        data-name="Pase Maratón Fin de Semana"
+                                        data-category="Digital"
+                                        data-price="5">Añadir</button>
+                            </div>
+                        </div>
+
+                        <h6 class="text-secondary mt-2">Animes en Físico</h6>
+
+                        <div class="border rounded p-2 mb-2 d-flex justify-content-between">
+                            <div><strong>Blu-ray Colección Naruto</strong><br><small class="text-muted">Físico</small></div>
+                            <div class="text-end">
+                                <div>S/ 150.00</div>
+                                <button class="btn btn-sm btn-primary btn-add"
+                                        data-id="5"
+                                        data-name="Blu-ray Colección Naruto"
+                                        data-category="Físico"
+                                        data-price="150">Añadir</button>
+                            </div>
+                        </div>
+
+                        <div class="border rounded p-2 mb-0 d-flex justify-content-between">
+                            <div><strong>DVD Edición Especial Ghibli</strong><br><small class="text-muted">Físico</small></div>
+                            <div class="text-end">
+                                <div>S/ 80.00</div>
+                                <button class="btn btn-sm btn-primary btn-add"
+                                        data-id="6"
+                                        data-name="DVD Edición Especial Ghibli"
+                                        data-category="Físico"
+                                        data-price="80">Añadir</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-7">
+                <div class="card shadow-sm" id="zona-carrito">
+                    <div class="card-body">
+
+                        <h3 class="fs-5 mb-3">Tu carrito</h3>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead class="table-dark">
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Categoría</th>
+                                    <th>Cant.</th>
+                                    <th>Precio</th>
+                                    <th>Subtotal</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody id="cart-body"></tbody>
+                            </table>
+                        </div>
+
+                        <label class="form-label small fw-semibold mt-3">Cupón de 10% (ANIME10)</label>
+                        <div class="input-group input-group-sm mb-3">
+                            <input type="text" id="cupon" class="form-control" placeholder="Ingresa código">
+                            <button class="btn btn-secondary" id="btn-cupon">Aplicar</button>
+                        </div>
+
+                        <div class="border-top pt-3">
+                            <div class="row mb-1"><div class="col-6 text-end">Subtotal:</div><div class="col-6" id="subtotal-cell">S/ 0.00</div></div>
+                            <div class="row mb-1"><div class="col-6 text-end">Descuento:</div><div class="col-6" id="descuento-cell">S/ 0.00</div></div>
+                            <div class="row mb-1"><div class="col-6 text-end">Delivery:</div><div class="col-6" id="delivery-cell">S/ 0.00</div></div>
+                            <div class="row mb-1 fw-bold"><div class="col-6 text-end">Total:</div><div class="col-6" id="total-cell">S/ 0.00</div></div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button class="btn btn-success fw-bold mt-3" id="btn-confirmar">Finalizar compra</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contenedor section-3">
+        <hr>
+        <div class="s5-contenido">
+            <div class="s5-logo"><img src="img/Crunchyroll_Logo.png" alt=""></div>
+            <div class="s5-texto">
+                <h3>SONY PICTURES</h3>
+                <p>Te damos la bienvenida a Crunchyroll.</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            &copy; <a href="#" class="autor">Hellen Merry Solis Cuba</a>
+            &copy; <a href="#">Crunchyroll, LLC</a>
+            <a href="#">Términos</a>
+            <a href="#">Cookies</a>
+        </footer>
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/carrito.js"></script>
+
+</body>
+</html>
