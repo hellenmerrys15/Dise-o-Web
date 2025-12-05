@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultad de Ciencias Sociales UC</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/LogoUC.jpg" alt="Logo de la Facultad de Ciencias Sociales">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programas.html">Programas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscripcion.html">inscripción</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="hero-uc">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Carrusel de portada">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="img/banner1.jpg" class="d-block w-100 hero-img" alt="Estudiantes en campus universitario">
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/banner2.jpg" class="d-block w-100 hero-img" alt="Biblioteca moderna de la universidad">
+            </div>
+        </div>
+
+        <div class="hero-overlay">
+            <h1 class="hero-title" data-aos="fade-down">Facultad de Ciencias Sociales</h1>
+            <p class="hero-text" data-aos="fade-up">
+                Formamos profesionales comprometidos con el desarrollo humano, la investigación y el análisis social.
+            </p>
+            <a href="programas.html" class="btn-hero" data-aos="zoom-in">Conoce nuestros programas</a>
+        </div>
+    </div>
+</section>
+
+<main class="container my-5">
+
+    <h2 class="titulo-bienvenida" data-aos="fade-up">
+        Bienvenidos a la Facultad de Ciencias Sociales de la UC
+    </h2>
+
+<section id="carreras" class="carreras-uc text-center my-5">
+
+    <h2 class="titulo-estilo-uc text-center mb-4" data-aos="fade-up">Nuestras carreras</h2>
+
+    <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4 col-lg-4" data-aos="zoom-in">
+            <div class="card shadow-sm carrera-card">
+                <img src="img/antropologia.jpg" class="card-img-top" alt="Estudiantes de antropología en trabajo de campo">
+                <div class="card-body text-center">
+                    <h5>Antropología</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card shadow-sm carrera-card">
+                <img src="img/cienciapolitica.jpg" class="card-img-top" alt="Debate de estudiantes de ciencia política">
+                <div class="card-body text-center">
+                    <h5>Ciencia Política y Gobierno</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card shadow-sm carrera-card">
+                <img src="img/economia.jpg" class="card-img-top" alt="Estudiantes de economía analizando gráficos">
+                <div class="card-body text-center">
+                    <h5>Economía</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card shadow-sm carrera-card">
+                <img src="img/finanzas.jpg" class="card-img-top" alt="Simulación de mercados financieros">
+                <div class="card-body text-center">
+                    <h5>Finanzas</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card shadow-sm carrera-card">
+                <img src="img/relacionesint.jpg" class="card-img-top" alt="Estudiantes de relaciones internacionales en conferencia">
+                <div class="card-body text-center">
+                    <h5>Relaciones Internacionales</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
+            <div class="card shadow-sm carrera-card">
+                <img src="img/sociologia.jpg" class="card-img-top" alt="Trabajo de campo de sociología con comunidades">
+                <div class="card-body text-center">
+                    <h5>Sociología</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="formulario-uc" data-aos="zoom-in">
+    <h2 class="titulo-form">Solicita información</h2>
+
+    <form class="form-uc" id="formSolicitud" aria-labelledby="titulo-solicitud">
+
+        <div class="grupo-doble">
+            <div class="campo-uc">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+            </div>
+
+           <div class="campo-uc">
+            <label for="correo">Correo electrónico *</label>
+            <input 
+                type="email"
+                id="correo"
+                name="correo"
+                required
+                placeholder="name@correo.com"
+                pattern="^[^@\s]+@[^@\s]+\.[cC][oO][mM]$"
+                title="El correo debe contener @ y terminar en .com (acepta .com, .COM, .cOm, etc)">
+
+            </div>
+
+        </div>
+
+        <div class="grupo-full">
+            <div class="campo-uc">
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-morado" aria-label="Enviar formulario de solicitud">Enviar solicitud</button>
+
+        <div id="msg-exito" class="mensaje-envio" aria-live="polite">
+            ✔ Tu mensaje ha sido enviado correctamente.
+        </div>
+
+    </form>
+</section>
+
+</main>
+
+<footer class="bg-dark text-center text-white py-3">
+    <p>&copy; 2025 Facultad de Ciencias Sociales / Autor: Hellen Merry Solis Cuba</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
+<script src="js/java.js"></script>
+
+</body>
+</html>

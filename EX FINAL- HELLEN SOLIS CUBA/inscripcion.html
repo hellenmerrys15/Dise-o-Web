@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facultad de Ciencias Sociales UC</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.ico">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/LogoUC.jpg" alt="Logo de la Facultad de Ciencias Sociales">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" 
+                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programas.html">Programas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscripcion.html">Inscripción</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container my-5">
+
+<section class="formulario-uc" data-aos="zoom-in" aria-labelledby="titulo-inscripcion">
+
+    <h2 id="titulo-inscripcion" class="titulo-form text-center mb-4">Formulario de Inscripción</h2>
+
+    <form id="formInscripcion" class="form-uc" aria-describedby="msgInscripcion">
+
+        <div class="grupo-doble">
+            <div class="campo-uc">
+                <label for="nombres">Nombres *</label>
+                <input type="text" id="nombres" name="nombres" required placeholder="Ingresa tus nombres">
+            </div>
+
+            <div class="campo-uc">
+                <label for="apellidos">Apellidos *</label>
+                <input type="text" id="apellidos" name="apellidos" required placeholder="Ingresa tus apellidos">
+            </div>
+        </div>
+
+        <div class="grupo-doble">
+            <div class="campo-uc">
+                <label for="edad">Edad *</label>
+                <input type="number" id="edad" name="edad" min="15" max="99" required placeholder="Ejemplo: 19">
+            </div>
+
+            <div class="campo-uc">
+                <label for="codigo">Código de estudiante *</label>
+                <input type="text" id="codigo" name="codigo" required placeholder="Ejemplo: 2023123456">
+            </div>
+        </div>
+
+        <div class="campo-uc">
+            <label for="correoGenerado">Correo institucional</label>
+            <input 
+                type="text"
+                id="correoGenerado"
+                name="correoGenerado"
+                readonly
+                placeholder="Se generará automáticamente">
+        </div>
+
+        <div class="campo-uc">
+            <label for="carrera">Carrera *</label>
+            <select id="carrera" name="carrera" required>
+                <option value="">Selecciona tu carrera</option>
+                <option>Antropología</option>
+                <option>Ciencia Política y Gobierno</option>
+                <option>Economía</option>
+                <option>Finanzas</option>
+                <option>Relaciones Internacionales</option>
+                <option>Sociología</option>
+                <option>Otro</option>
+            </select>
+        </div>
+
+        <div class="campo-uc">
+            <label for="pertenece">¿Pertenece a la Facultad de Ciencias Sociales? *</label>
+            <select id="pertenece" name="pertenece" required>
+                <option value="">Seleccione una opción</option>
+                <option>Sí</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <div class="campo-uc">
+            <label for="programa">Programa a inscribirse *</label>
+            <select id="programa" name="programa" required>
+                <option value="">Selecciona un programa</option>
+                <option>Programa de Ética Pública y Transparencia</option>
+                <option>Programa de Juventudes y Participación</option>
+                <option>Programa de Voluntariado Social</option>
+                <option>Programa de Estudios de Género</option>
+            </select>
+        </div>
+
+        <div class="campo-uc">
+            <label for="periodo">Periodo *</label>
+            <select id="periodo" name="periodo" required>
+                <option value="">Selecciona un periodo</option>
+                <option>2026-0</option>
+                <option>2026-1</option>
+                <option>2026-2</option>
+            </select>
+        </div>
+
+        <div class="campo-uc">
+            <label for="modalidad">Modalidad de estudio *</label>
+            <select id="modalidad" name="modalidad" required>
+                <option value="">Selecciona una modalidad</option>
+                <option>Presencial</option>
+                <option>Semipresencial</option>
+                <option>Virtual</option>
+            </select>
+        </div>
+
+        <div class="campo-uc">
+            <label for="motivo">Motivo de inscripción *</label>
+            <textarea id="motivo" name="motivo" rows="4" required placeholder="Explica brevemente por qué deseas inscribirte..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-morado" aria-label="Enviar inscripción">Enviar inscripción</button>
+
+        <div id="msgInscripcion" class="mensaje-envio" aria-live="polite">
+            ✔ ¡Tu inscripción ha sido registrada correctamente!
+        </div>
+
+    </form>
+</section>
+
+</main>
+
+<footer class="bg-dark text-center text-white py-3">
+    <p>&copy; 2025 Facultad de Ciencias Sociales / Autor: Hellen Merry Solis Cuba</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init();</script>
+
+<script src="js/java.js"></script>
+
+</body>
+</html>
